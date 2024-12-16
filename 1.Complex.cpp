@@ -3,7 +3,7 @@ using namespace std;
 
 // Class representing a complex number
 class complex {
-    float real, imag;  // Declare two private data members for the real and imaginary parts of the complex number
+    float real, imag; 
 public:
     // Constructor to initialize the complex number (default values are 0,0)
     complex(float r=0, float i=0) {
@@ -11,7 +11,7 @@ public:
         imag = i;
     }
 
-    // Overloaded '+' operator for adding two complex numbers
+    // Overloaded '+' operator for adding two complex number
     complex operator+(complex &c1) {
         complex c3;  // Create a temporary complex number object to hold the result
         c3.real = real + c1.real;  // Add the real parts
@@ -48,23 +48,21 @@ public:
 int main() {
     complex c1, c2, c3;  // Declare three complex numbers (c1, c2, c3)
 
-    // Ask for user input to initialize the first complex number
+    //User Input
     cout << "Enter the first complex number:" << endl;
     cin >> c1;
-
-    // Ask for user input to initialize the second complex number
     cout << "Enter the second complex number:" << endl;
     cin >> c2;
 
-    // Perform the addition of the two complex numbers
+    // addition of two complex numbers
     c3 = c1 + c2;
-    cout << "Sum: " << c3 << endl;  // Display the sum of the two complex numbers
+    cout << "Sum: " << c3 << endl;
 
-    // Perform the multiplication of the two complex numbers
+    //multiplication of the two complex numbers
     c3 = c1 * c2;
-    cout << "Product: " << c3 << endl;  // Display the product of the two complex numbers
+    cout << "Product: " << c3 << endl;  // Display
 
-    return 0;  // End the program
+    return 0;  
 }
 
 // Explanation of the code:
