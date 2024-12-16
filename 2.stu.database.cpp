@@ -75,29 +75,29 @@ public:
         return StudentCount;
     }
 
-    // Function to input student details
+    //Input
     void setValues() {
         cout << "Enter Name: ";
-        cin.ignore();  // Clear the input buffer
-        getline(cin, name);  // Input name
+        cin.ignore();  
+        getline(cin, name);  
         cout << "Enter Roll Number: ";
-        cin >> rollNumber;  // Input roll number
-        cin.ignore();  // Clear the input buffer
+        cin >> rollNumber; 
+        cin.ignore(); 
         cout << "Enter Class: ";
-        getline(cin, className);  // Input class name
+        getline(cin, className);  
         cout << "Enter Division: ";
-        cin >> division;  // Input division
-        cin.ignore();  // Clear the input buffer
+        cin >> division;  
+        cin.ignore(); 
         cout << "Enter Date of Birth (DD/MM/YYYY): ";
-        getline(cin, dob);  // Input date of birth
+        getline(cin, dob); 
         cout << "Enter Blood Group: ";
-        getline(cin, bloodGroup);  // Input blood group
+        getline(cin, bloodGroup);  
         cout << "Enter Address: ";
-        getline(cin, address);  // Input address
+        getline(cin, address);  
         cout << "Enter Telephone Number: ";
-        getline(cin, telephoneNumber);  // Input telephone number
+        getline(cin, telephoneNumber);  
         cout << "Enter Driving License No: ";
-        getline(cin, drivingLicenseNo);  // Input driving license number
+        getline(cin, drivingLicenseNo);  
     }
 
     // Function to display student details
