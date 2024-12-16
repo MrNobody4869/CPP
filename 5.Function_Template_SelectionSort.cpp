@@ -106,5 +106,37 @@ int main() {
         }
     }
 
-    return 0;  // Exit the program successfully
+    return 0;  
 }
+
+
+
+
+
+/*
+Templates are the foundation of generic programming, which involves
+writing code in a way thatis independent of any particular type.
+A template is a blueprint or formula for creating a generic class or a function. Thelibrary containers like iterators
+and algorithms are examples of generic programming
+and have been developed using template concept. There is a single definition of each
+container, such as vector, but we can define many different kinds of vectorsforexample, vector <int> or vector <string>.
+You can use templates to define functions as well as classes, let us see howdotheywork:Function Template:
+The general form of a template function definition is shown here:
+template <class type> ret-type func-name(parameter list)
+{
+// body of function
+}
+Here, type is a placeholder name for a data type used by the function. This
+name can be used within the function definition.
+
+Class Template:
+Just as we can define functionb templates, we can also define class templates. Thegeneral
+form of a generic classdeclaration is shown here:
+template <class type> class class-name
+Selection Sort:
+Selection sort is a sorting algorithm, specifically an in-place comparison sort. It has O(n2)timecomplexity, makingit inefficient on large lists, and
+generally performs worse than the similar insertion sort. 
+Selection sort is noted for its simplicity, and it has performance advantages over more complicated algorithms in certain situations,
+particularly where auxiliarymemory is limited
+
+*/
