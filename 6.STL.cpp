@@ -7,9 +7,9 @@ using namespace std;
 // Structure to store personal record details
 struct PersonalRecord
 {
-    string name;    // Name of the person
-    string dob;     // Date of birth (DD/MM/YYYY)
-    string phone;   // Phone number
+    string name;
+    string dob;
+    string phone;
 
     // Overloading < operator to compare PersonalRecord by name (for sorting)
     bool operator<(const PersonalRecord& other) const
@@ -32,13 +32,13 @@ void insertRecord()
 {
     PersonalRecord record;
     cout << "Enter Name: ";
-    cin.ignore();  // To clear the input buffer
-    getline(cin, record.name);  // Get name input
+    cin.ignore();  // Clear the input buffer to avoid issues with getline
+    getline(cin, record.name);  
     cout << "Enter Date of Birth (DD/MM/YYYY): ";
-    getline(cin, record.dob);  // Get date of birth input
+    getline(cin, record.dob);  
     cout << "Enter Telephone Number: ";
-    getline(cin, record.phone);  // Get phone number input
-    records.push_back(record);  // Add the record to the vector
+    getline(cin, record.phone);  
+    records.push_back(record);  
 }
 
 // Function to display all records
@@ -103,7 +103,7 @@ void deleteRecord()
     cin.ignore();  // To clear the input buffer
     getline(cin, name);  // Get the name of the record to delete
 
-    // Find and remove the record using remove_if and lambda function
+    // Find the record and remove it using remove_if and lambda function
     auto it = remove_if(records.begin(), records.end(), [&name](const PersonalRecord& record)
     {
         return record.name == name;  // Compare the name to find the record to delete
@@ -140,28 +140,72 @@ int main()
         switch (choice)
         {
         case 1:
-            insertRecord();  // Call function to insert a new record
+            insertRecord();  
             break;
         case 2:
-            displayRecords();  // Call function to display all records
+            displayRecords();  
             break;
         case 3:
-            searchRecord();  // Call function to search a record by name
+            searchRecord();  
             break;
         case 4:
-            sortRecords();  // Call function to sort records by name
+            sortRecords();  
             break;
         case 5:
-            deleteRecord();  // Call function to delete a record by name
+            deleteRecord();  
             break;
         case 6:
-            cout << "Exiting...\n";  // Exit the program
+            cout << "Exiting...\n";  
             break;
         default:
-            cout << "Invalid choice! Please try again.\n";  // Invalid choice handler
+            cout << "Invalid choice! Please try again.\n";  
         }
     }
-    while (choice != 6);  // Continue the menu loop until the user chooses to exit
+    while (choice != 6);  
 
-    return 0;  // Exit the program successfully
+    return 0;  
 }
+
+
+
+/*
+### STL (Standard Template Library): STL (Standard Template Library) is a collection of template classes 
+and functions in C++ that provides common data structures and algorithms
+
+1. **STL Components**:
+   - **Algorithms**: Functions designed for operations on container elements (e.g., sorting, searching).
+   - **Containers**: Data structures for storing objects and data.
+   - **Functions**: Functors that allow customizing function behavior.
+   - **Iterators**: Objects that provide access to container elements.
+
+2. **STL Algorithm Types**:
+   - **Sorting**: Organizes data in ascending or descending order.
+   - **Searching**: Searches for elements in sorted containers.
+   - **Numeric Operations**: Performs numeric tasks like summing or finding the minimum.
+   - **Partition Operations**: Divides data into groups based on a condition.
+
+3. **Containers**:
+   - **Sequence Containers**: Accessed sequentially (e.g., `vector`, `list`, `deque`, `array`).
+   - **Container Adaptors**: Specialized interfaces (e.g., `queue`, `stack`, `priority_queue`).
+   - **Associative Containers**: Sorted data structures for quick search (`set`, `map`).
+   - **Unordered Associative Containers**: Unordered data structures for fast search (`unordered_set`, `unordered_map`).
+
+4. **Functors (Function Objects)**:
+   - Classes that overload the function call operator, allowing functions to be customized with parameters.
+
+5. **Iterators**:
+   - Used to traverse and operate on containers, providing flexibility and generality to STL algorithms.
+
+6. **Utility Library**:
+   - Provides utilities like `pair` for storing two related values.
+
+7. **Sorting with `sort()`**:
+   - Sorts elements in ascending or descending order using a hybrid of QuickSort, HeapSort, and InsertionSort.
+   - `sort(startAddress, endAddress)` sorts elements between the given addresses.
+
+8. **Searching**:
+   - Efficient searching algorithms (e.g., binary search) that work on sorted data by dividing the data in half.
+
+STL simplifies C++ programming by providing ready-to-use, efficient data structures and algorithms.
+
+*/
